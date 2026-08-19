@@ -2,6 +2,7 @@
 修复了Linux不能向微软发送错误报告的bug
 
 [![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: Linux](https://img.shields.io/badge/platform-Linux-lightgrey.svg)]()
 
 ---
@@ -121,8 +122,82 @@ rm -rf ~/.cache/crash-sim          # 缓存目录
 rm -rf ~/.config/crash-sim         # 配置文件目录
 ```
 
+> 💡 提示：使用 `pip show crash-simulator` 可以查看包的安装位置
+
 ---
 
 ## 不同桌面环境的适配说明
 
-本工具默认使用 ~/.config/autostart/ 目录来实现开机自启动（[freedesktop.org] 标准），大多数主流 Linux 桌面环境支持
+* 为了让所有Linux用户都能吃上这坨shit *
+
+默认使用 ~/.config/autostart/ 目录来实现开机自启动（freedesktop.org标准），大多数主流 Linux 桌面环境支持
+### 支持的桌面环境
+
+| 桌面环境 | 自启动支持 | 备注 |
+|---------|-----------|------|
+| **GNOME** (3.x/40+) | ✅ 完全支持 | 使用标准 `autostart` 目录 |
+| **KDE Plasma** | ✅ 完全支持 | 同上 |
+| **XFCE** | ✅ 完全支持 | 同上 |
+| **Cinnamon** | ✅ 完全支持 | 同上 |
+| **MATE** | ✅ 完全支持 | 同上 |
+| **LXDE / LXQt** | ✅ 完全支持 | 同上 |
+| **i3 / Sway / Awesome** (WM) | ⚠️ 有限支持 | 需要手动配置启动，见下文 |
+| **Deepin / Unity** | ✅ 完全支持 | 同上 |
+
+### 平铺窗口管理器（i3 / Sway / Awesome 等）
+如果你使用纯粹的窗口管理器（而非完整桌面环境），`~/.config/autostart` 目录下的 `.desktop` 文件**不会自动执行**。你需要手动将启动命令添加到窗口管理器的配置文件中。
+
+**示例（i3）：** 编辑 `~/.config/i3/config`，添加：
+
+```
+exec --no-startup-id crash-sim
+```
+
+**示例（Sway）：** 编辑 `~/.config/sway/config`，添加：
+
+```
+exec crash-sim
+```
+
+**示例（Awesome WM）：** 编辑 `~/.config/awesome/rc.lua`，添加：
+
+```lua
+awful.spawn.with_shell("crash-sim")
+```
+
+### 手动管理自启动（通用）
+
+如果你希望在任何环境下都手动控制自启动，可以：
+
+1. 运行 `crash-sim-setup` 时选择 **不启用** 自启动
+2. 在你想启动的时候，手动执行 `crash-sim &` 放到后台运行
+3. 或者将 `crash-sim` 添加到你的 shell 配置文件（如 `~/.bashrc`），但这样每次打开终端都会启动，不太推荐，会导致每个新终端都启动一个监控进程，造成资源浪费。
+
+---
+## 常见问题
+
+> ### Q: 如何临时禁用监控？
+>A: 按 `Ctrl + C` 终止程序即可。如果想在不重启程序的情况下暂停监控，可以 kill 掉对应的 Python 进程，或者直接在代码中给 `ProcessMonitor` 添加一个 `pause()` 方法（目前版本未内置该功能）。
+
+> ### Q: 开机自启动没生效？
+> A: 请检查：
+> 1. 确认 `~/.config/autostart/crash-sim.desktop` 文件存在且内容正确
+> 2. 确认该文件有执行权限（通常不需要，但可以 `chmod +x` 尝试）
+> 3. 确认你的桌面环境支持 `autostart` 标准（参考上表）
+> 4. 尝试重启桌面会话（或重新登录），有些桌面环境只在登录时扫描一次 autostart 目录
+> 5. 手动运行 `crash-sim` 测试命令本身是否正常工作
+
+> ### Q: 卸载后自启动项还在？
+> A: 请确保先执行 `crash-sim-setup --uninstall` 再卸载包。如果已经卸载了包，可以手动删除自启动文件：
+> ```bash
+> rm -f ~/.config/autostart/crash-sim.desktop
+> ```
+
+> ### Q: 在 Wayland 下能正常工作吗？
+> A: 可以，程序本身不依赖 X11。但 `ping` 命令的权限问题需要注意：Wayland 会话下网络权限与 X11 无异，`ping` 通常需要 `CAP_NET_RAW` 能力或 setuid 位。如果 `ping` 无法执行，程序会报告“发送失败”，但弹窗功能不受影响。
+
+
+## 贡献（贡献一坨滚木?)
+
+欢迎提交 Issue
+
