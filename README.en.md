@@ -25,7 +25,7 @@
 
 ## Introduction
 
-**Crash Simulator** is a Python program that runs on Linux desktop environments. It does the following:
+a Python program that runs on Linux desktop environments. It does the following:
 
 1. **Monitors** processes started by the current user and detects when they exit.  
 2. When a process exits, it **pops up a Windows‑style “Microsoft Windows Error Reporting” window**.  
