@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: Linux](https://img.shields.io/badge/platform-Linux-lightgrey.svg)]()
 
+(English)[README.en.md] | **简体中文** | (文言)[README.lzh.md] | (Русский язык)[README.ru.md]
+
 ---
 
 ## 警告
