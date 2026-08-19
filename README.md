@@ -24,7 +24,7 @@
 
 ## 简介
 
-Crash Simulator 是一个运行在 Linux 桌面环境下的 Python 程序，它会：
+一个运行在 Linux 桌面环境下的 Python 程序，它会：
 
 1. **监控** 当前用户启动的进程，检测它们何时退出
 2. 当检测到进程退出时，**弹出一个 Windows 风格的「Microsoft Windows 错误报告」窗口**
