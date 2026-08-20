@@ -1,4 +1,4 @@
-Hark! Attend, ye noble users and gentle coders, to this proclamation regarding the **Windows' Crash Report for Linux**, a most curious contrivance also known as the **cCrash Simulator**.
+Hark! Attend, ye noble users and gentle coders, to this proclamation regarding the **Windows' Crash Report for Linux**, a most curious contrivance also known as the **Crash Simulator**.
 
 **[README:English](README.en.md)** | 
 **[README:简体中文](README.md)** | 
@@ -9,7 +9,7 @@ Hark! Attend, ye noble users and gentle coders, to this proclamation regarding t
 
 ### A Prologue & Solemn Declaration
 *   **The Grand Design:** 'Tis a remedy for that grievous bug wherein Linux could not dispatch tidings of error unto Microsoft. Verily, it bringeth the Windows Error Reporting experience unto thy Linux realm.
-*   **A Warning from the Author:** I confess mine own unfamiliarity with the Linux arts. This project is born of "Red Stone Technology" and wrought by Artificial Intelligence.
+*   **A Warning from the Author:** I confess mine own unfamiliarity with the Linux arts. This project is born of "SHIT Technology" and wrought by Artificial Intelligence.
 *   **Heed This Caution:** Pray, do *not* unleash this jester upon thy production stage nor any vessel of serious labour. 'Tis but for merriment and folly.
 
 ### Virtues & Graces
