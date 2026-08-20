@@ -1,4 +1,4 @@
-# Windows' Crash Report for Linux (cCrash Simulator)
+# Windows' Crash Report for Linux (Crash Simulator)
 
 解决了Linux不能向微软发送错误报告的bug
 
