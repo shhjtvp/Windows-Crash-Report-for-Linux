@@ -2,10 +2,12 @@
 
 Исправляет баг, из-за которого Linux не может отправлять отчёты об ошибках в Microsoft.
 
-**(English)[README.en.md]** | 
-**(简体中文)[README.md]** | 
-**(文言)[README.lzh.md]** | 
-**(Русский язык)[README.ru.md]**
+**[README:English](README.en.md)** | 
+**[README:简体中文](README.md)** | 
+**[README:文言](README.lzh.md)** | 
+**[README:Русский язык](README.ru.md)** |
+**[README:Shakespearean English](README.sp_en.md)** |
+**[README:佛曰](README.zh_bu.md)**
 
 
 ## Отказ от ответственности

@@ -2,10 +2,12 @@
 
 補Linux不能傳誤報於微軟之闕也。
 
-**(English)[README.en.md]** | 
-**(简体中文)[README.md]** | 
-**(文言)[README.lzh.md]** | 
-**(Русский язык)[README.ru.md]**
+**[README:English](README.en.md)** | 
+**[README:简体中文](README.md)** | 
+**[README:文言](README.lzh.md)** | 
+**[README:Русский язык](README.ru.md)** |
+**[README:Shakespearean English](README.sp_en.md)** |
+**[README:佛曰](README.zh_bu.md)**
 
 
 ## 戒辭

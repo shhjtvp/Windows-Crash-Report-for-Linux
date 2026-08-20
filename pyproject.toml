@@ -58,7 +58,7 @@ where = ["src"]
 
 # 包含静态资源文件
 [tool.setuptools.package-data]
-crash_simulator = ["assets/*.png", "assets/*.qss"]
+crash_simulator = ["locales/*.json", "assets/*.png", "assets/*.qss"]
 
 # Ruff 代码检查配置
 [tool.ruff]
