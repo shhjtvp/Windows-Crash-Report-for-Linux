@@ -1,6 +1,6 @@
 """Crash Simulator - 非侵入式进程崩溃模拟与仿 Windows 弹窗工具"""
 
-__version__ = "Beta 0.1.1"
+__version__ = "0.1.1b0"
 __author__ = "红蘑菇hj"
 __license__ = "MIT"
 
