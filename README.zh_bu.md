@@ -1,7 +1,7 @@
 ### 读 `README.md` 如观心：Windows 崩溃报告模拟器（Linux 版）
 
 > **题记**
-> 万法皆空，唯因果不昧。此项目名曰“Windows Crash Report for Linux”，亦称 cCrash Simulator。非为造业，乃为观照；非为实用，乃为破执。施主当知：屏幕上的蓝屏是幻，心中的焦虑亦是幻。
+> 万法皆空，唯因果不昧。此项目名曰“Windows Crash Report for Linux”，亦称 Crash Simulator。非为造业，乃为观照；非为实用，乃为破执。施主当知：屏幕上的蓝屏是幻，心中的焦虑亦是幻。
 
 **[README:English](README.en.md)** | 
 **[README:简体中文](README.md)** | 
