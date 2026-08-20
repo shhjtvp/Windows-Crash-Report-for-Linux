@@ -54,7 +54,9 @@ version = {attr = "crash_simulator.__version__"}
 
 # 包发现配置（适配 src layout）
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src"]  # 明确指定源码位于 src 目录
+include = ["crash_simulator*"]  # 只包含 crash_simulator 包及其子模块
+exclude = ["tests*", "assets*"]  # 排除测试和资源目录
 
 # 包含静态资源文件
 [tool.setuptools.package-data]
