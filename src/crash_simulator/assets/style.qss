@@ -1,0 +1,140 @@
+/* =========================================
+   Windows 11 Fluent Design Style Sheet
+   Target: Crash Simulator Dialog
+   ========================================= */
+
+/* --- 全局基础设置 --- */
+QWidget#CrashDialog {
+    background-color: #F3F3F3;       /* Win11 Mica/Acrylic 浅色基底 */
+    border: 1px solid #E5E5E5;       /* 细微边框模拟窗口边缘 */
+    border-radius: 8px;              /* Win11 标准 8px 圆角 */
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei UI", sans-serif;
+    font-size: 14px;
+    color: #202020;
+}
+
+/* --- 标题栏区域 --- */
+QWidget#TitleBar {
+    background-color: transparent;
+    padding: 12px 16px 8px 16px;
+}
+
+QLabel#TitleLabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: #202020;
+    background: transparent;
+}
+
+/* --- 内容区域 --- */
+QWidget#ContentArea {
+    background-color: #FBFBFB;       /* 内容卡片背景，比窗口底色略亮 */
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    margin: 4px 16px 16px 16px;
+    padding: 20px;
+}
+
+QLabel#IconLabel {
+    min-width: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background: transparent;
+}
+
+QLabel#MessageLabel {
+    font-size: 14px;
+    line-height: 20px;
+    color: #202020;
+    background: transparent;
+    word-wrap: break-word;
+}
+
+QLabel#DetailLabel {
+    font-size: 12px;
+    color: #616161;                  /* Win11 次要文本色 */
+    margin-top: 8px;
+    background: transparent;
+    word-wrap: break-word;
+}
+
+/* --- 按钮通用样式 (Win11 Accent Button) --- */
+QPushButton {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D1D1;       /* 默认按钮边框 */
+    border-bottom: 2px solid #CECECE;/* Win11 按钮底部加粗边框模拟立体感 */
+    border-radius: 4px;
+    padding: 6px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #202020;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #F9F9F9;
+    border-color: #C7C7C7;
+    border-bottom: 2px solid #C7C7C7;
+}
+
+QPushButton:pressed {
+    background-color: #F0F0F0;
+    border: 1px solid #D1D1D1;       /* 按下时取消底部加粗 */
+    padding: 7px 24px 5px 24px;      /* 补偿边框变化防止跳动 */
+}
+
+QPushButton:focus {
+    outline: none;
+    border: 2px solid #0078D4;       /* Win11 焦点指示器 */
+}
+
+/* --- 主要操作按钮 (Accent Color) --- */
+QPushButton#PrimaryButton {
+    background-color: #0078D4;       /* Win11 默认强调色 */
+    border: 1px solid #0078D4;
+    border-bottom: 2px solid #006CBE;
+    color: #FFFFFF;
+}
+
+QPushButton#PrimaryButton:hover {
+    background-color: #006CBE;
+    border-color: #006CBE;
+    border-bottom: 2px solid #0063AE;
+}
+
+QPushButton#PrimaryButton:pressed {
+    background-color: #0063AE;
+    border: 1px solid #0063AE;
+    padding: 7px 24px 5px 24px;
+}
+
+QPushButton#PrimaryButton:focus {
+    border: 2px solid #202020;
+}
+
+/* --- 滚动条 (如果详情文本过长) --- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 0;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #C8C8C8;
+    min-height: 30px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #A0A0A0;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+}
