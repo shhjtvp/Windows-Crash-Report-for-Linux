@@ -1,4 +1,4 @@
-# Windows' Crash Report for Linux (cCrash Simulator)
+# Windows' Crash Report for Linux (Crash Simulator)
 
 Fixes the bug where Linux cannot send error reports to Microsoft.
 
